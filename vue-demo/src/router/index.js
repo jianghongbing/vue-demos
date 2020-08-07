@@ -11,6 +11,7 @@ import ConditionRender from '../views/ConditionalRender';
 import ListRender from '../views/ListRender';
 import EventHandle from '../views/EventHandle';
 import FormBind from '../views/FormBind';
+import ComponentBasic from '../views/ComponentBasic';
 Vue.use(VueRouter);
 
 const routes = [
@@ -98,6 +99,14 @@ const routes = [
       title: "表单输入绑定",
     },
   },
+  {
+    path: '/componentBasic',
+    name: '/componentBasic',
+    component: ComponentBasic,
+    meta: {
+      title: '组件基础',
+    }
+  }
 ];
 
 const router = new VueRouter({

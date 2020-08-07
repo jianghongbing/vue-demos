@@ -51,6 +51,10 @@ export default {
         {
           to: '/formBind',
           title: '表单输入绑定',
+        },
+        {
+          to: '/componentBasic',
+          title: '组件基础',
         }
       ]
     },
