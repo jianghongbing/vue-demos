@@ -55,6 +55,10 @@ export default {
         {
           to: '/componentBasic',
           title: '组件基础',
+        },
+        {
+          to: '/componentRegister',
+          title: '组件注册',
         }
       ]
     },

@@ -12,6 +12,8 @@ import ListRender from '../views/ListRender';
 import EventHandle from '../views/EventHandle';
 import FormBind from '../views/FormBind';
 import ComponentBasic from '../views/ComponentBasic';
+import ComponentRegister from '../views/ComponentRegister';
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -106,7 +108,16 @@ const routes = [
     meta: {
       title: '组件基础',
     }
-  }
+  },
+  {
+    path: '/componentRegister',
+    name: '/componentRegister',
+    component: ComponentRegister,
+    meta: {
+      title: '组件注册',
+    }
+  },
+  
 ];
 
 const router = new VueRouter({
