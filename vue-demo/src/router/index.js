@@ -13,6 +13,7 @@ import EventHandle from '../views/EventHandle';
 import FormBind from '../views/FormBind';
 import ComponentBasic from '../views/ComponentBasic';
 import ComponentRegister from '../views/ComponentRegister';
+import Prop from '../views/Prop';
 
 Vue.use(VueRouter);
 
@@ -117,7 +118,14 @@ const routes = [
       title: '组件注册',
     }
   },
-  
+  {
+    path: '/prop',
+    name: '/prop',
+    component: Prop,
+    meta: {
+      title: '组件属性',
+    }
+  },
 ];
 
 const router = new VueRouter({

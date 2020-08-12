@@ -23,10 +23,16 @@ export default {
 
 <style scoped lang='scss'>
 .navigation-bar {
-  position: relative;
+  position: fixed;
   text-align: center;
-  height: 44px;
+  background: white;
   border-bottom: 1px solid #eee;
+  width: 100%;
+  max-width: 640px;
+  height: 44px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   button {
     position: absolute;
     top: 50%;

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <vd-navigation-bar :title="navigationBarTitle" :canGoBack="canGoBack" />
-    <router-view />
+    <router-view class="root-view"/>
   </div>
 </template>
 
@@ -35,6 +35,9 @@ export default {
   min-width: 320px;
   max-width: 640px;
   margin: 0 auto;
+}
+.root-view {
+  margin-top: 44px;
 }
 </style>
 

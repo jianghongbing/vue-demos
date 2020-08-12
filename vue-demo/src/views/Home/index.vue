@@ -59,6 +59,10 @@ export default {
         {
           to: '/componentRegister',
           title: '组件注册',
+        },
+        {
+          to: '/prop',
+          title: '组件属性',
         }
       ]
     },
