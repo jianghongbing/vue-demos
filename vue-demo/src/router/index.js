@@ -14,6 +14,8 @@ import FormBind from '../views/FormBind';
 import ComponentBasic from '../views/ComponentBasic';
 import ComponentRegister from '../views/ComponentRegister';
 import Prop from '../views/Prop';
+import CustomEvent from '../views/CustomEvent';
+
 
 Vue.use(VueRouter);
 
@@ -104,7 +106,7 @@ const routes = [
   },
   {
     path: '/componentBasic',
-    name: '/componentBasic',
+    name: 'componentBasic',
     component: ComponentBasic,
     meta: {
       title: '组件基础',
@@ -112,7 +114,7 @@ const routes = [
   },
   {
     path: '/componentRegister',
-    name: '/componentRegister',
+    name: 'componentRegister',
     component: ComponentRegister,
     meta: {
       title: '组件注册',
@@ -120,12 +122,20 @@ const routes = [
   },
   {
     path: '/prop',
-    name: '/prop',
+    name: 'prop',
     component: Prop,
     meta: {
       title: '组件属性',
     }
   },
+  {
+    path: '/customEvent',
+    name: 'customEvent',
+    component: CustomEvent,
+    meta: {
+      title: '自定义事件',
+    }
+  }
 ];
 
 const router = new VueRouter({

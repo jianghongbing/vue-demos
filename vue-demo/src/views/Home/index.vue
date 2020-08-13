@@ -63,6 +63,10 @@ export default {
         {
           to: '/prop',
           title: '组件属性',
+        },
+        {
+          to: '/customEvent',
+          title: '自定义事件',
         }
       ]
     },
