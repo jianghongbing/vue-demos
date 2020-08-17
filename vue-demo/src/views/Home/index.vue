@@ -67,6 +67,10 @@ export default {
         {
           to: '/customEvent',
           title: '自定义事件',
+        },
+        {
+          to: '/slot',
+          title: '插槽',
         }
       ]
     },

@@ -15,7 +15,7 @@ import ComponentBasic from '../views/ComponentBasic';
 import ComponentRegister from '../views/ComponentRegister';
 import Prop from '../views/Prop';
 import CustomEvent from '../views/CustomEvent';
-
+import Slot from '../views/Slot';
 
 Vue.use(VueRouter);
 
@@ -134,6 +134,14 @@ const routes = [
     component: CustomEvent,
     meta: {
       title: '自定义事件',
+    }
+  },
+  {
+    path: '/slot',
+    name: 'slot',
+    component: Slot,
+    meta: {
+      title: '插槽',
     }
   }
 ];
