@@ -71,6 +71,10 @@ export default {
         {
           to: '/slot',
           title: '插槽',
+        },
+        {
+          to: '/dynamic',
+          title: '动态组件&异步组件',
         }
       ]
     },

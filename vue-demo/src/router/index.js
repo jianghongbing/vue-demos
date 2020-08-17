@@ -3,20 +3,20 @@ import store from "../store";
 import VueRouter from "vue-router";
 import Home from "../views/Home";
 import Instance from "../views/Instance";
-import TemplatSynatx from '../views/TemplateSynatx';
-import Directives from '../views/Directives';
-import ComputedProperty from '../views/ComputedProperty';
-import StyleBind from '../views/StyleBind';
-import ConditionRender from '../views/ConditionalRender';
-import ListRender from '../views/ListRender';
-import EventHandle from '../views/EventHandle';
-import FormBind from '../views/FormBind';
-import ComponentBasic from '../views/ComponentBasic';
-import ComponentRegister from '../views/ComponentRegister';
-import Prop from '../views/Prop';
-import CustomEvent from '../views/CustomEvent';
-import Slot from '../views/Slot';
-
+import TemplatSynatx from "../views/TemplateSynatx";
+import Directives from "../views/Directives";
+import ComputedProperty from "../views/ComputedProperty";
+import StyleBind from "../views/StyleBind";
+import ConditionRender from "../views/ConditionalRender";
+import ListRender from "../views/ListRender";
+import EventHandle from "../views/EventHandle";
+import FormBind from "../views/FormBind";
+import ComponentBasic from "../views/ComponentBasic";
+import ComponentRegister from "../views/ComponentRegister";
+import Prop from "../views/Prop";
+import CustomEvent from "../views/CustomEvent";
+import Slot from "../views/Slot";
+// import Dynamic from '../views/Dynamic';
 Vue.use(VueRouter);
 
 const routes = [
@@ -105,45 +105,55 @@ const routes = [
     },
   },
   {
-    path: '/componentBasic',
-    name: 'componentBasic',
+    path: "/componentBasic",
+    name: "componentBasic",
     component: ComponentBasic,
     meta: {
-      title: '组件基础',
-    }
+      title: "组件基础",
+    },
   },
   {
-    path: '/componentRegister',
-    name: 'componentRegister',
+    path: "/componentRegister",
+    name: "componentRegister",
     component: ComponentRegister,
     meta: {
-      title: '组件注册',
-    }
+      title: "组件注册",
+    },
   },
   {
-    path: '/prop',
-    name: 'prop',
+    path: "/prop",
+    name: "prop",
     component: Prop,
     meta: {
-      title: '组件属性',
-    }
+      title: "组件属性",
+    },
   },
   {
-    path: '/customEvent',
-    name: 'customEvent',
+    path: "/customEvent",
+    name: "customEvent",
     component: CustomEvent,
     meta: {
-      title: '自定义事件',
-    }
+      title: "自定义事件",
+    },
   },
   {
-    path: '/slot',
-    name: 'slot',
+    path: "/slot",
+    name: "slot",
     component: Slot,
     meta: {
-      title: '插槽',
-    }
-  }
+      title: "插槽",
+    },
+  },
+  {
+    path: "/dynamic",
+    name: "dynamic",
+    // component: Dynamic,
+    //以异步的形式加载组件
+    component: () => import("../views/Dynamic"),
+    meta: {
+      title: "动态组件&异步组件",
+    },
+  },
 ];
 
 const router = new VueRouter({
