@@ -22,4 +22,12 @@ new Vue({
   router,
   store,
   render: (h) => h(App),
+  data: {
+    id: 'amdin',
+  },
+  methods: {
+    alertId() {
+      alert(`id:${this.id}`);
+    }
+  },
 }).$mount("#app");

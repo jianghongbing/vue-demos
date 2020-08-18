@@ -75,6 +75,10 @@ export default {
         {
           to: '/dynamic',
           title: '动态组件&异步组件',
+        },
+        {
+          to: '/edge',
+          title: '处理边界情况',
         }
       ]
     },

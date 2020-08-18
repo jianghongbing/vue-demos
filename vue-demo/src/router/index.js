@@ -154,6 +154,15 @@ const routes = [
       title: "动态组件&异步组件",
     },
   },
+  {
+    path: "/edge",
+    name: "edge",
+    component: () => import("../views/Edge"),
+    meta: {
+      title: "处理边界情况",
+    },
+  },
+  
 ];
 
 const router = new VueRouter({
