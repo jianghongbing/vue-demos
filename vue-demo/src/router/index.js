@@ -162,6 +162,14 @@ const routes = [
       title: "处理边界情况",
     },
   },
+  {
+    path: "/mixins",
+    name: "mixins",
+    component: () => import("../views/Mixins"),
+    meta: {
+      title: "混入",
+    },
+  },
   
 ];
 

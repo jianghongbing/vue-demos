@@ -79,6 +79,10 @@ export default {
         {
           to: '/edge',
           title: '处理边界情况',
+        },
+        {
+          to: '/mixins',
+          title: '混入',
         }
       ]
     },
