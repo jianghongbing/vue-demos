@@ -170,6 +170,14 @@ const routes = [
       title: "混入",
     },
   },
+  {
+    path: '/customDirective',
+    name: 'customDirective',
+    component: () => import('../views/CustomDirective'),
+    meta: {
+      title: '自定义指令',
+    }
+  }
   
 ];
 

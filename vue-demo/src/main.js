@@ -5,6 +5,7 @@ import store from "./store";
 import "./scss/reset.scss";
 import "./scss/fonts.scss";
 import "./utils/registerBaseComponents";
+import './directives';
 Vue.config.productionTip = false;
 
 Vue.config.errorHandler = function(error, vm, info) {

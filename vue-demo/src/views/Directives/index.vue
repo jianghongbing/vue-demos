@@ -92,8 +92,5 @@ export default {
   [v-cloak] {
     color: red;
   }
-  .outter {
-    
-  }
 }
 </style>

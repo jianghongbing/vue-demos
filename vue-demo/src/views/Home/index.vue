@@ -83,6 +83,10 @@ export default {
         {
           to: '/mixins',
           title: '混入',
+        },
+        {
+          to: '/customDirective',
+          title: '自定义指令',
         }
       ]
     },
