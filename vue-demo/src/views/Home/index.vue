@@ -87,6 +87,10 @@ export default {
         {
           to: '/customDirective',
           title: '自定义指令',
+        },
+        {
+          to: '/render',
+          title: 'render函数',
         }
       ]
     },

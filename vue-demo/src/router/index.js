@@ -171,14 +171,21 @@ const routes = [
     },
   },
   {
-    path: '/customDirective',
-    name: 'customDirective',
-    component: () => import('../views/CustomDirective'),
+    path: "/customDirective",
+    name: "customDirective",
+    component: () => import("../views/CustomDirective"),
     meta: {
-      title: '自定义指令',
-    }
-  }
-  
+      title: "自定义指令",
+    },
+  },
+  {
+    path: "/render",
+    name: "render",
+    component: () => import("../views/Render"),
+    meta: {
+      title: "渲染函数",
+    },
+  },
 ];
 
 const router = new VueRouter({
