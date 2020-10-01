@@ -91,6 +91,10 @@ export default {
         {
           to: '/render',
           title: 'render函数',
+        },
+        {
+          to: '/jsx',
+          title: 'JSX',
         }
       ]
     },
