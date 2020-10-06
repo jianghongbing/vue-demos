@@ -9,6 +9,19 @@ const routes = [
     path: '/home',
     name: 'home',
     component: () => import('../pages/Home'),
+  },
+  {
+    path: '/noparam',
+    component: () => import('../pages/NoParam'),
+  },
+  {
+    path: '/withparams/:userName/:password',
+    name: 'withparams',
+    component: () => import('../pages/WithParams'),
+  },
+  {
+    path: '*',
+    component: () => import('../pages/404'),
   }
 ];
 
