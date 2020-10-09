@@ -1,5 +1,5 @@
 import VueRouter from 'vue-router';
-// import NamedViewTop from '../pages/NamedView/Top.vue';
+
 const routes = [
   {
     path: '/',
@@ -67,10 +67,56 @@ const routes = [
     //   userName: 'jiangxiaoyu',
     // }
     props: (route) => ({
-      ...route.params, ...route.query, extra: {
+      ...route.params,
+      ...route.query,
+      extra: {
         nickName: 'xiaoyuer',
         address: 'xxxx',
-    }}),
+      },
+    }),
+  },
+  {
+    path: '/navigationguards',
+    component: () => import('../pages/NavigationGuards'),
+    beforeEnter: (to, from, next) => {
+      console.log('route beforeEnter callback');
+      next();
+    },
+    children: [
+      {
+        path: 'a',
+        component: () => import('../pages/NavigationGuards/ChildA.vue'),
+      },
+      {
+        path: 'b',
+        component: () => import('../pages/NavigationGuards/ChildB.vue'),
+        beforeEnter: (to, from, next) => {
+          next(false);
+        }
+      },
+      {
+        path: 'c',
+        component: () => import('../pages/NavigationGuards/ChildC.vue'),
+        beforeEnter: (to, from, next) => {
+          const error = new Error("Don't allow navigate to C")
+          next(error);
+        }
+      },
+      {
+        path: 'd',
+        component: () => import('../pages/NavigationGuards/ChildD.vue'),
+      },
+      {
+        path: 'e',
+        beforeEnter: (to, from, next) => {
+          next('d');
+        }
+      },
+      {
+        path: '',
+        redirect: 'a',
+      }
+    ]
   },
   {
     path: '*',
@@ -84,4 +130,20 @@ const router = new VueRouter({
   mode: 'hash',
 });
 
+router.onError(error => {
+  alert(error.message);
+})
+
+router.beforeEach((to, from, next) => {
+  console.log('router beforeEach callback');
+  next();
+})
+
+router.beforeResolve((to, from, next) => {
+  console.log('router beforeResolve callback');
+  next();
+})
+router.afterEach(() => {
+  console.log('router afterEach callback');
+})
 export default router;

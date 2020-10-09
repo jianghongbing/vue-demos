@@ -56,6 +56,10 @@
       <span>路由组件传参</span>
       <CustomArrow />
     </div>
+    <router-link to="/navigationguards" class="route-link" tag="div">
+      <span>路由导航守卫</span>
+      <CustomArrow />
+    </router-link>
   </div>
 </template>
 
@@ -83,6 +87,10 @@ export default {
         }
       })
     },
+  },
+  beforeRouteLeave (to, from, next) {
+    console.log('home beforeRouteLeave callback');
+    next()
   }
 }
 </script>
