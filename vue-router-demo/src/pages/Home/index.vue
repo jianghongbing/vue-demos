@@ -8,14 +8,54 @@
       <span>带有参数的路由</span>
       <CustomArrow />
     </router-link>
-    <router-link to="/withparams/admin/123456?userId=001&foo=bar" class="route-link" tag="div">
+    <router-link
+      to="/withparams/admin/123456?userId=001&foo=bar"
+      class="route-link"
+      tag="div"
+    >
       <span>带有参数和query字符串的路由</span>
       <CustomArrow />
     </router-link>
-        <router-link :to="{name: 'withparams', params: {userName: 'root', password: 'P@ssW0rd'},query:{userId: '000', foo: 'bar'}}" class="route-link" tag="div">
+    <router-link
+      :to="{
+        name: 'withparams',
+        params: { userName: 'root', password: 'P@ssW0rd' },
+        query: { userId: '000', foo: 'bar' },
+      }"
+      class="route-link"
+      tag="div"
+    >
       <span>以对象的形式传递参数和query字符串</span>
       <CustomArrow />
     </router-link>
+    <router-link to="/notfound" class="route-link" tag="div">
+      <span>404 NotFound</span>
+      <CustomArrow />
+    </router-link>
+    <div class="route-link" @click="toNext">
+      <span>通过代码实现路由跳转</span>
+      <CustomArrow />
+    </div>
+    <router-link to="/nestroute" class="route-link" tag="div">
+      <span>嵌套路由</span>
+      <CustomArrow />
+    </router-link>
+    <router-link to="/redirect" class="route-link" tag="div">
+      <span>重定向</span>
+      <CustomArrow />
+    </router-link>
+    <router-link to="/alias" class="route-link" tag="div">
+      <span>路由别名</span>
+      <CustomArrow />
+    </router-link>
+    <router-link to="/namedview" class="route-link" tag="div">
+      <span>命名视图</span>
+      <CustomArrow />
+    </router-link>
+    <div class="route-link" @click="toComponentPropsPage">
+      <span>路由组件传参</span>
+      <CustomArrow />
+    </div>
   </div>
 </template>
 
@@ -27,6 +67,23 @@ export default {
   components: {
     CustomArrow,
   },
+  methods: {
+    toNext() {
+      this.$router.push('/withparams/admin/123456?userId=001&foo=bar');
+    },
+    toComponentPropsPage() {
+      this.$router.push({
+        name: 'paramsToProps',
+        params: {
+          userId: '001',
+          userName: 'admin',
+        },
+        query: {
+          foo: 'bar',
+        }
+      })
+    },
+  }
 }
 </script>
 
