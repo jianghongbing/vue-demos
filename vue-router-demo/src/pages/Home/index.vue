@@ -68,14 +68,10 @@
       <span>router-view API</span>
       <CustomArrow />
     </router-link>
-    <!-- <router-link to="/routelink" class="route-link" tag="div">
-      <span>router-view API</span>
+    <router-link to="/router" class="route-link" tag="div">
+      <span>router API</span>
       <CustomArrow />
     </router-link>
-    <router-link to="/routelink" class="route-link" tag="div">
-      <span>route-link API</span>
-      <CustomArrow />
-    </router-link> -->
   </div>
 </template>
 

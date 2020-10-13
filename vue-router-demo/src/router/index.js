@@ -133,8 +133,12 @@ const routes = [
       {
         path: '',
         redirect: 'a',
-      }
+      },
     ],
+  },
+  {
+    path: '/routerview',
+    redirect: '/namedview',
   },
   {
     path: '*',
