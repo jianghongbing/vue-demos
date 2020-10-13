@@ -60,6 +60,22 @@
       <span>路由导航守卫</span>
       <CustomArrow />
     </router-link>
+    <router-link to="/routelink" class="route-link" tag="div">
+      <span>route-link API</span>
+      <CustomArrow />
+    </router-link>
+    <router-link to="/routerview" class="route-link" tag="div">
+      <span>router-view API</span>
+      <CustomArrow />
+    </router-link>
+    <!-- <router-link to="/routelink" class="route-link" tag="div">
+      <span>router-view API</span>
+      <CustomArrow />
+    </router-link>
+    <router-link to="/routelink" class="route-link" tag="div">
+      <span>route-link API</span>
+      <CustomArrow />
+    </router-link> -->
   </div>
 </template>
 
@@ -88,7 +104,7 @@ export default {
       })
     },
   },
-  beforeRouteLeave (to, from, next) {
+  beforeRouteLeave(to, from, next) {
     console.log('home beforeRouteLeave callback');
     next()
   }
