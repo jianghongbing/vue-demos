@@ -141,6 +141,32 @@ const routes = [
     redirect: '/namedview',
   },
   {
+    path: '/router',
+    component: () => import('../pages/Router'),
+    children: [
+      {
+        path: '',
+        component: () => import('../pages/Router/A.vue'),
+      },
+      {
+        path: 'a',
+        component: () => import('../pages/Router/A.vue'),
+      },
+      {
+        path: 'b',
+        component: () => import('../pages/Router/B.vue'),
+      },
+      {
+        path: 'c',
+        component: () => import('../pages/Router/C.vue'),
+      },
+      {
+        path: 'd',
+        component: () => import('../pages/Router/D.vue'),
+      }
+    ],
+  },
+  {
     path: '*',
     component: () => import('../pages/404'),
   },
@@ -149,6 +175,8 @@ const routes = [
 const router = new VueRouter({
   routes,
   // base: '/vr',
+  linkActiveClass: 'router-demo-active',
+  linkExactActiveClass: 'router-demo-exact-active',
   mode: 'hash',
 });
 
