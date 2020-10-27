@@ -72,6 +72,10 @@
       <span>router API</span>
       <CustomArrow />
     </router-link>
+    <router-link to="/route/bar?userId=001&name=admin" class="route-link" tag="div">
+      <span>route API</span>
+      <CustomArrow />
+    </router-link>
   </div>
 </template>
 

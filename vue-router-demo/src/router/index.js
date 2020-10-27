@@ -167,6 +167,15 @@ const routes = [
     ],
   },
   {
+    path: '/route/:foo',
+    component: () => import('../pages/Route'),
+    query: {
+      userId: '001',
+      name: 'admin'
+    },
+    props: true
+  },
+  {
     path: '*',
     component: () => import('../pages/404'),
   },
