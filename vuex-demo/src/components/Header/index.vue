@@ -14,13 +14,13 @@ export default {
 .vx-header {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   height: 44px;
   background: #fff;
   width: 100%;
   min-width: 320px;
   max-width: 640px;
-  margin: 0 auto;
+  transform: translate(-50%);
   border-bottom: 1px solid #eee;
 }
 
