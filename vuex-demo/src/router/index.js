@@ -14,6 +14,10 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "count-demo-01" */ '../views/count-demo-01'),
   },
+  {
+    path: '/count-demo-02',
+    component: () => import(/* webpackChunkName "count-demo-02" */ '../views/count-demo-02'),
+  }
 ];
 
 const router = createRouter({
