@@ -3,7 +3,7 @@
     <span class="count">{{ $store.state.count }}</span>
     <VXButton class="button" @click="increment">increment</VXButton>
     <VXButton class="button" @click="decrement">decrement</VXButton>
-    <VXButton class="button" @click="incrementTwo">decrement 2</VXButton>
+    <VXButton class="button" @click="incrementTwo">increment 2</VXButton>
   </div>
 </template>
 

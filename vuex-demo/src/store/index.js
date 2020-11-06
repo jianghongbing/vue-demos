@@ -25,7 +25,18 @@ export default createStore({
       state.count += number;
     },
   },
-  actions: {},
+  actions: {
+    incrementAsync(context) {
+      setTimeout(() => {
+        context.commit(INCREMENT_MUTATION);
+      }, 1000);
+    },
+    incrementAction({ commit }, number=1) {
+      commit('incrementNumber', {
+        number,
+      });
+    },
+  },
   modules: {},
   getters: {
     doubleCount(state) {
