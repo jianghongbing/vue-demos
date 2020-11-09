@@ -1,6 +1,8 @@
 import { createStore, createLogger } from 'vuex';
 import { INCREMENT_MUTATION, DECREMENT_MUTATION } from './mutation-type';
+import todo from './modules/todo';
 const isDebug = process.env.NODE_ENV !== 'production';
+
 
 export default createStore({
   state: {
@@ -37,11 +39,14 @@ export default createStore({
       });
     },
   },
-  modules: {},
+  modules: {
+    todo,
+  },
   getters: {
     doubleCount(state) {
       return state.count * 2;
     },
   },
+
   plugins: isDebug ? [createLogger()] : [],
 });

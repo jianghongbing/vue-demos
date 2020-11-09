@@ -21,6 +21,10 @@ export default {
         {
           to: '/count-demo-02',
           title: 'count-demo-02',
+        },
+        {
+          to: '/todo-demo-01',
+          title: 'todo-demo-01',
         }
       ]
     }
