@@ -3,9 +3,9 @@
 
 // };
 
-const state = () => ({
+const state = {
   todos: [],
-});
+};
 
 const getters = {
   totalTodoCount(state) {

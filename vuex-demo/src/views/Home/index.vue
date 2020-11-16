@@ -25,6 +25,10 @@ export default {
         {
           to: '/todo-demo-01',
           title: 'todo-demo-01',
+        },
+        {
+          to: '/todo-demo-02',
+          title: 'todo-demo-02',
         }
       ]
     }

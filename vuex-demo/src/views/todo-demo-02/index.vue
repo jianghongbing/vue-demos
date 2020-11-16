@@ -37,11 +37,10 @@
 import VXButton from '../../components/VXButton';
 import TodoItem from '../../components/TodoItem';
 import {
-  mapState,
-  mapGetters,
-  mapMutations,
+  createNamespacedHelpers,
 } from 'vuex';
 
+const {mapState, mapMutations, mapGetters} = createNamespacedHelpers('todo');
 
 export default {
   name: 'vx-todo-demo-01',
@@ -72,14 +71,11 @@ export default {
     deleteTodoItem(id) {
       this.deleteTodo(id);
     },
-    ...mapMutations('todo', ['addTodo', 'deleteTodo', 'completeTodo']),
+    ...mapMutations(['addTodo', 'deleteTodo', 'completeTodo']),
   },
   computed: {
-    // ...mapState({
-    //   todos: state=>state.todo.todos,
-    // }),
-    ...mapState('todo', ['todos']),
-    ...mapGetters('todo', ['totalTodoCount']),
+    ...mapState(['todos']),
+    ...mapGetters(['totalTodoCount']),
   },
 }
 </script>

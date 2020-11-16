@@ -22,7 +22,12 @@ const routes = [
   {
     path: '/todo-demo-01',
     component: () =>
-      import(/* webpackChunkName "todo-demo" */ '../views/todo-demo-01'),
+      import(/* webpackChunkName "todo-demo-01" */ '../views/todo-demo-01'),
+  },
+  {
+    path: '/todo-demo-02',
+    component: () =>
+      import(/* webpackChunkName "todo-demo-02" */ '../views/todo-demo-02'),
   },
 ];
 
