@@ -29,6 +29,10 @@ export default {
         {
           to: '/todo-demo-02',
           title: 'todo-demo-02',
+        },
+        {
+          to: '/form-handler',
+          title: '表单处理',
         }
       ]
     }

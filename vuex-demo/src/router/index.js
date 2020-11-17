@@ -29,6 +29,11 @@ const routes = [
     component: () =>
       import(/* webpackChunkName "todo-demo-02" */ '../views/todo-demo-02'),
   },
+  {
+    path: '/form-handler',
+    component: () =>
+      import(/* webpackChunkName "todo-demo-02" */ '../views/Form'),
+  },
 ];
 
 const router = createRouter({
