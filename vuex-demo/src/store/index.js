@@ -1,10 +1,10 @@
-import { createStore, createLogger } from 'vuex';
+import { createStore, createLogger, Store } from 'vuex';
 import { INCREMENT_MUTATION, DECREMENT_MUTATION } from './mutation-type';
 import todo from './modules/todo';
 import form from './modules/form';
 const isDebug = process.env.NODE_ENV !== 'production';
 
-export default createStore({
+const store = createStore({
   state: {
     count: 100,
   },
@@ -48,5 +48,30 @@ export default createStore({
     todo,
     form,
   },
-  plugins: isDebug ? [createLogger()] : [],
+  plugins: isDebug ? [createLogger({
+    collapsed: false,
+  })] : [],
+  // strict: isDebug,
+  // devtools: isDebug,
+  strict: true,
+  devtools: false,
 });
+
+const unwatch = store.watch(function (state, getters) {
+  console.log(state, getters);
+  return state.count;
+}, function (value, oldValue) {
+    console.log(value, oldValue);
+}, {
+  
+});
+
+const unSubscribe = store.subscribe((mutation, state) => {
+  console.log(mutation, state);
+}, {
+  prepend: true
+})
+
+
+
+export default store;
