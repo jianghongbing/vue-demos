@@ -193,6 +193,13 @@ const routes = [
       title: 'JSX',
     },
   },
+  {
+    path: '/functional-component',
+    component: () => import('../views/Functional'),
+    meta: {
+      title: '函数式组件',
+    }
+  }
 ];
 
 const router = new VueRouter({

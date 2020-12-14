@@ -95,6 +95,10 @@ export default {
         {
           to: '/jsx',
           title: 'JSX',
+        },
+        {
+          to: '/functional-component',
+          title: '函数式组件',
         }
       ]
     },
