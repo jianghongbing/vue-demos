@@ -99,6 +99,10 @@ export default {
         {
           to: '/functional-component',
           title: '函数式组件',
+        },
+        {
+          to: '/filters',
+          title: '过滤器',
         }
       ]
     },

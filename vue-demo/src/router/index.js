@@ -199,6 +199,13 @@ const routes = [
     meta: {
       title: '函数式组件',
     }
+  }, 
+  {
+    path: '/filters',
+    component: () => import('../views/Filters'),
+    meta: {
+      title: '过滤器',
+    }
   }
 ];
 
