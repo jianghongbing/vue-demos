@@ -206,7 +206,14 @@ const routes = [
     meta: {
       title: '过滤器',
     }
-  }
+  },
+  {
+    path: '/transition',
+    component: () => import('../views/Transition'),
+    meta: {
+      title: '过渡'
+    }
+  },
 ];
 
 const router = new VueRouter({

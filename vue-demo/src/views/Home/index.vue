@@ -103,6 +103,10 @@ export default {
         {
           to: '/filters',
           title: '过滤器',
+        },
+        {
+          to: '/transition',
+          title: '过渡 & 动画',
         }
       ]
     },
