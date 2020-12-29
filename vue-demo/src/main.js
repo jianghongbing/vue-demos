@@ -7,10 +7,20 @@ import './scss/fonts.scss';
 import './utils/registerBaseComponents';
 import './directives';
 import './filters';
-Vue.config.productionTip = false;
+
+// Vue.config.silent = process.env.NODE_ENV === 'development'
+Vue.config.silent = true;
+Vue.config.productionTip = true;
+// Vue.config.devtools = false;
 
 Vue.config.errorHandler = function(error, vm, info) {
   console.log(error, vm, info);
+};
+
+Vue.config.warnHandler = function(msg, vm, trace) {
+  console.log('warn message:' + msg);
+  console.log(vm);
+  console.log(trace);
 };
 
 //全局注册组件
@@ -32,3 +42,5 @@ new Vue({
     },
   },
 }).$mount('#app');
+
+console.log(Vue.version);
