@@ -13,9 +13,9 @@ Vue.config.silent = true;
 Vue.config.productionTip = true;
 // Vue.config.devtools = false;
 
-Vue.config.errorHandler = function(error, vm, info) {
-  console.log(error, vm, info);
-};
+// Vue.config.errorHandler = function(error, vm, info) {
+//   console.log(error, vm, info);
+// };
 
 Vue.config.warnHandler = function(msg, vm, trace) {
   console.log('warn message:' + msg);
